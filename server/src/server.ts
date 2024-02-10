@@ -16,7 +16,7 @@ async function main() {
 			  })
 			: cors()
 	)
-	if (config.isProduction) app.use(morgan('dev'))
+	if (!config.isProduction) app.use(morgan('dev'))
 	if (config.staticPath) app.use(express.static(config.staticPath))
 	app.use(express.json())
 	app.use('/api', router)
