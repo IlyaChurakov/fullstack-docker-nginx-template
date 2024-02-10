@@ -1,0 +1,26 @@
+{
+	"author": "Ilya Churakov",
+	"license": "MIT",
+	"main": "src/server.ts",
+	"scripts": {
+		"dev": "tsnd --respawn src/server.ts",
+		"build": "npm run clean && tsc -b",
+		"clean": "rm -rf ./dist"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.1",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.21",
+		"@types/morgan": "^1.9.9",
+		"@types/node": "^20.11.17",
+		"colors": "^1.4.0",
+		"morgan": "^1.10.0",
+		"nodemon": "^3.0.3",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.3.3"
+	}
+}

@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  client:
+    container_name: client
+    restart: on-failure
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 8000:5000
+
+  server:
+    container_name: server
+    restart: on-failure
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      - CLIENT_URL=http://localhost:5000
+      - NODE_ENV=production
+    ports:
+      - 8001:5001
+
+  nginx:
+    container_name: nginx
+    restart: on-failure
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx.conf
+    ports:
+      - 80:80
+    depends_on:
+      - server
+      - client

@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"noEmit": false,
+		"target": "esnext",
+		"module": "commonjs",
+		"strict": true,
+		"downlevelIteration": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"outDir": "dist"
+	},
+	"exclude": ["dist", "node_modules"],
+	"include": ["src"]
+}
