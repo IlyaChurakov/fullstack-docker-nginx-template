@@ -3,3 +3,9 @@ dist
 node_modules
 static/*
 package-lock.json
+*.crt
+*.key
+*.vscode/*
+!.vscode/extensions.json
+*.idea
+*.DS_Store

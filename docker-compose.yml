@@ -17,8 +17,8 @@ services:
       context: ./server
       dockerfile: Dockerfile
     environment:
-      - CLIENT_URL=http://localhost:5000
-      - NODE_ENV=production
+      - CLIENT_URL=https://localhost
+      # - NODE_ENV=production
     ports:
       - 8001:5001
 
@@ -32,6 +32,7 @@ services:
       - ./nginx/nginx.conf:/etc/nginx.conf
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - server
       - client

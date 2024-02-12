@@ -7,7 +7,7 @@ import { router } from './routes'
 
 async function main() {
 	const app = express()
-	console.log(config.clientUrl)
+
 	app.use(
 		config.clientUrl
 			? cors({
